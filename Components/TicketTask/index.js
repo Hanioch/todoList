@@ -113,12 +113,14 @@ const TicketTask = ({ info, listFunctions, list }) => {
           </TouchableOpacity>
         </View>
       )}
+
       {childTask.length > 0 && (
         <View style={styles.child}>
           <List
             Children={TicketTask}
-            list={childTask}
+            list={list}
             listFunctions={listFunctions}
+            filterList={childTask}
           />
         </View>
       )}

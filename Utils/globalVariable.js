@@ -1,11 +1,13 @@
 export const taskListGlobal = [
   {
-    id: 0,
+    id: 1,
+    idParent: null,
     content: "ceci est une tache non completer",
     isCompleted: false,
   },
   {
-    id: 1,
+    id: 2,
+    idParent: null,
     content: "ceci est une tache completer",
     isCompleted: true,
   },

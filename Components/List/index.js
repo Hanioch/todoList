@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import React from "react";
 
-const List = ({ list, Children, listFunctions }) => {
+const List = ({ list, Children, listFunctions, filterList }) => {
   const renderItem = ({ item }) => (
     <>
       <Children info={item} listFunctions={listFunctions} list={list} />
@@ -14,7 +14,7 @@ const List = ({ list, Children, listFunctions }) => {
   return (
     <View>
       <FlatList
-        data={list}
+        data={filterList}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />

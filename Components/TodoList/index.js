@@ -43,20 +43,16 @@ const TodoList = ({ list, setList, stateId }) => {
 
   // const principalTask = list.filter((task) => !task.idParent);
   // console.log("yes", principalTask);
-
+  const filterList = list.filter((task) => !task.idParent);
+  console.log("filterList", filterList);
   return (
     <View>
       <List
+        filterList={filterList}
         list={list}
         Children={TicketTask}
         listFunctions={{ setIsCompleted, removeTask, setTask, addTask }}
-        stateId={stateId}
       />
-      {/* <FlatList
-        data={list}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-      /> */}
     </View>
   );
 };

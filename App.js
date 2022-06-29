@@ -7,9 +7,9 @@ import { taskListGlobal } from "./Utils/globalVariable";
 
 export default function App() {
   const [list, setList] = useState(taskListGlobal);
-  const [id, setId] = useState(2);
+  const [id, setId] = useState(3);
   useEffect(() => {
-    console.log("ded", list);
+    console.log("ici", list);
   }, [list]);
 
   return (
